@@ -50,7 +50,7 @@ def convert_single_sentence(token_list, max_seq_length):
 	tokens.append("[SEP]") 
 	return tokens
 
-###	text_b and sentence pairs?	next time
+
 def convert_sentences(sents, max_seq_length=256):
 	global tokenizer
 	if tokenizer is None: tokenizer = create_tokenizer_from_hub_module()
@@ -329,7 +329,7 @@ def gen_word_level_labels(sent, token_list, word_list, pos_list=None):
 	return rlist
 
 if __name__ == '__main__':
-	sent = '\x7f她于1958年云南大学生物系植物专业本科毕业，留在本校生物系工作'
+	sent = '@@@ I    have 10 RTX 2080Ti.'
 	tokens = tokenize_sentence(sent)
 	otokens = restore_token_list(sent, tokens)
 	print(tokens)
