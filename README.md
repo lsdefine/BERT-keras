@@ -19,7 +19,7 @@ model = Model(inputs=bert_inputs, outputs=x)
 
 X = bert.convert_sentences(sentences)   #  X = [input_ids, input_masks, segment_ids]
 
-lr_scheduler, optimizer = bert.get_suggested_scheduler_and_optimizer(init_lr=1e-3, total_steps=total_batchs)
+lr_scheduler, optimizer = bert.get_suggested_scheduler_and_optimizer(init_lr=1e-3, total_steps=total_batches)
 model.compile(optimizer=optimizer, loss=...)
 model.fit(X, Y, ..., callbacks=[lr_scheduler])
 ```
